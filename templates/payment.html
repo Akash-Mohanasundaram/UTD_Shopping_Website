@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment</title>
+    <style>
+      header {
+        background-color: #154734;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav li {
+        margin-left: 1rem;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="https://websvcs.utdallas.edu/shared/svg/utd-monogram-orange.svg"
+            alt="Logo"
+        /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('shopping_page') }}">Home</a></li>
+          <li><a href="{{ url_for('cart') }}">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Payment Successfull</h1>
+    </main>
+  </body>
+</html>

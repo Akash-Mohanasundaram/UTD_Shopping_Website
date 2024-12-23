@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment</title>
+    <style>
+      header {
+        background-color: #154734;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav li {
+        margin-left: 1rem;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      main {
+        margin: 2rem auto;
+        width: 90%;
+        max-width: 700px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        padding: 1rem;
+        background-color: #154734;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"
+          ><img
+            src="https://websvcs.utdallas.edu/shared/svg/utd-monogram-orange.svg"
+            alt="Logo"
+        /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('shopping_page') }}">Home</a></li>
+          <li><a href="{{ url_for('cart') }}">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Payment</h1>
+      <form method="POST">
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" /><br /><br />
+
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="text" id="expiry_date" name="expiry_date" /><br /><br />
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" /><br /><br />
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" /><br /><br />
+
+        <label for="billing_address">Billing Address:</label>
+        <input
+          type="text"
+          id="billing_address"
+          name="billing_address"
+        /><br /><br />
+
+        <label for="billing_city">Billing City:</label>
+        <input type="text" id="billing_city" name="billing_city" /><br /><br />
+
+        <label for="billing_state">Billing State:</label>
+        <input
+          type="text"
+          id="billing_state"
+          name="billing_state"
+        /><br /><br />
+
+        <label for="billing_zip">Billing ZIP Code:</label>
+        <input type="text" id="billing_zip" name="billing_zip" /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" /><br /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br /><br />
+
+        <button type="submit">Submit Payment</button>
+      </form>
+    </main>
+  </body>
+</html>
